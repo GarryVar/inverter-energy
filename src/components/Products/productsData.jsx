@@ -483,118 +483,70 @@ export const products = {
       },
     },
 
-
     // JINKO
-    {
-      id: "JKN650-670N-66QL6-BVD",
-      tool: "Солнечная панель",
-      title: "Jinko 650",
-      model: "66QL6-BVD",
-      subtitle: "Солнечная панель технологии Tiger Neo III",
-      image: jkm650670n,
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Преобразование солнечной энергии в электричество",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "JINKO",
-          logo: <LogoJinko />,
-          link: "https://www.jinkosolar.com/en/",
-        },
-        technology: {
-          label: "Технология",
-          value: "TOPCon, Bifacial",
-          titleSmall:
-            "TOPCon (Tunnel Oxide Passivated Contact — «туннельный оксидный пассивированный контакт») — это технология изготовления самих солнечных ячеек. Она пришла на смену более старой технологии PERC и позволяет заметно повысить эффективность преобразования солнечного света в электричество",
-        },
-        power: { label: "Мощность", value: "650Вт" },
-        efficiency: { label: "КПД", value: "24.06%" },
-        maxFuseCurrentA: {
-          label: "Max ток предохранителя",
-          value: "35 A",
-        },
-        size: {
-          label: "Габариты",
-          value: "2382x1134x30 мм.",
-        },
-        weight: { label: "Вес", value: "32.5 кг" },
-        operatingTemperatureRangeC: {
-          label: "Рабочая температура",
-          value: "−40…+70 °C",
-        },
-        cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
-      },
-      price: "Уточняйте на складе",
-      badge: "Хит продаж",
-    },
+
+    // {
+    //   id: "JKN48QL6-DB",
+    //   tool: "Солнечная панель",
+    //   title: "Jinko 460",
+    //   model: "48QL60DB",
+    //   subtitle:
+    //     "Солнечная панель технологии Tiger Neo III. Ведущий класс мощности на базе усовершенствованной платформы N‑type TOPCon благодаря передовым технологиям и оптимизированной компоновке, которая улавливает больше солнечного света",
+    //   image: jkm650670n,
+    //   price: "Уточняйте на складе",
+    //   badge: "Хит продаж",
+    //   inStock: false,
+    //   purpose: {
+    //     label: "Назначение",
+    //     value: "Преобразование солнечной энергии в электричество",
+    //   },
+    //   features: {
+    //     brand: {
+    //       label: "Бренд",
+    //       value: "JINKO",
+    //       logo: <LogoJinko />,
+    //       link: "https://www.jinkosolar.com/en/",
+    //     },
+    //     technology: {
+    //       label: "Технология",
+    //       value: "N-type Mono-crystaline",
+    //       titleSmall:
+    //         "N-type Mono-crystaline -  — это тип солнечных ячеек (и панелей на их основе): «mono‑crystalline» значит, что ячейка сделана из одного кристалла кремния, а «N‑type» — что это кремний n‑типа (с электронной проводимостью).",
+    //     },
+    //     voltage: {
+    //       label: "Максимальное напрежение",
+    //       value: "36.63 В",
+    //     },
+    //     power: { label: "Мощность", value: "460Вт" },
+    //     maxFuseCurrentA: {
+    //       label: "Max ток предохранителя",
+    //       value: "30 A",
+    //     },
+    //     size: {
+    //       label: "Габариты",
+    //       value: "1762x1140x30 мм.",
+    //     },
+    //     weight: { label: "Вес", value: "24.4 кг" },
+    //     operatingTemperatureRangeC: {
+    //       label: "Рабочая температура",
+    //       value: "−40…+70 °C",
+    //     },
+    //     cell: {
+    //       label: "Количество ячеек", value: "264 (66x4)"
+    //     }
+    //   },
+    // },
 
     {
-      id: "JKN48QL6-DB",
-      tool: "Солнечная панель",
-      title: "Jinko 460",
-      model: "48QL60DB",
-      subtitle:
-        "Солнечная панель технологии Tiger Neo III. Ведущий класс мощности на базе усовершенствованной платформы N‑type TOPCon благодаря передовым технологиям и оптимизированной компоновке, которая улавливает больше солнечного света",
-      image: jkm650670n,
-      price: "Уточняйте на складе",
-      badge: "Хит продаж",
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Преобразование солнечной энергии в электричество",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "JINKO",
-          logo: <LogoJinko />,
-          link: "https://www.jinkosolar.com/en/",
-        },
-        technology: {
-          label: "Технология",
-          value: "N-type Mono-crystaline",
-          titleSmall:
-            "N-type Mono-crystaline -  — это тип солнечных ячеек (и панелей на их основе): «mono‑crystalline» значит, что ячейка сделана из одного кристалла кремния, а «N‑type» — что это кремний n‑типа (с электронной проводимостью).",
-        },
-        voltage: {
-          label: "Максимальное напрежение",
-          value: "36.63 В",
-        },
-        power: { label: "Мощность", value: "460Вт" },
-        maxFuseCurrentA: {
-          label: "Max ток предохранителя",
-          value: "30 A",
-        },
-        size: {
-          label: "Габариты",
-          value: "1762x1140x30 мм.",
-        },
-        weight: { label: "Вес", value: "24.4 кг" },
-        operatingTemperatureRangeC: {
-          label: "Рабочая температура",
-          value: "−40…+70 °C",
-        },
-        cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
-      },
-    },
-
-    {
-      id: "JKN48QL6-DB",
+      id: "JKM465M-48QL6-DB",
       tool: "Солнечная панель",
       title: "Jinko 465",
-      model: "48QL60DB",
+      model: "JKM465M-48QL60DB",
       subtitle: "Солнечная панель технологии Tiger Neo III",
       image: jkm650670n,
-      price: "Уточняйте на складе",
+      price: "12 400 ₽",
       badge: "Хит продаж",
-      inStock: false,
+      inStock: true,
       purpose: {
         label: "Назначение",
         value: "Преобразование солнечной энергии в электричество",
@@ -638,13 +590,13 @@ export const products = {
       },
     },
     {
-      id: "JKN48QL6-DB",
+      id: "JKM650N-66QL6-BDV",
       tool: "Солнечная панель",
-      title: "Jinko 470",
-      model: "48QL60DB",
+      title: "Jinko 650",
+      model: "JKM650N-66QL6BDV",
       subtitle: "Солнечная панель технологии Tiger Neo III",
       image: jkm650670n,
-      price: "Уточняйте на складе",
+      price: "16 800 ",
       badge: "Хит продаж",
       inStock: false,
       purpose: {
@@ -666,18 +618,19 @@ export const products = {
         },
         voltage: {
           label: "Максимальное напрежение",
-          value: "30.97 В",
+          value: "42,57 В",
         },
-        power: { label: "Мощность", value: "470Вт" },
+        power: { label: "Мощность", value: "650Вт" },
+        efficiency: { label: "КПД", value: "24. 6%" },
         maxFuseCurrentA: {
           label: "Max ток предохранителя",
-          value: "30 A",
+          value: "35 A",
         },
         size: {
           label: "Габариты",
-          value: "1762x1140x30 мм.",
+          value: "2382x1140x30 мм.",
         },
-        weight: { label: "Вес", value: "24.4 кг" },
+        weight: { label: "Вес", value: "32, 5 кг" },
         operatingTemperatureRangeC: {
           label: "Рабочая температура",
           value: "−40…+70 °C",
@@ -688,158 +641,6 @@ export const products = {
         }
       },
     },
-    {
-      id: "JKN48QL6-DB",
-      tool: "Солнечная панель",
-      title: "Jinko 475",
-      model: "48QL60DB",
-      subtitle: "Солнечная панель технологии Tiger Neo III",
-      image: jkm650670n,
-      price: "Уточняйте на складе",
-      badge: "Хит продаж",
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Преобразование солнечной энергии в электричество",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "JINKO",
-          logo: <LogoJinko />,
-          link: "https://www.jinkosolar.com/en/",
-        },
-        technology: {
-          label: "Технология",
-          value: "N-type Mono-crystaline",
-          titleSmall:
-            "N-type Mono-crystaline -  — это тип солнечных ячеек (и панелей на их основе): «mono‑crystalline» значит, что ячейка сделана из одного кристалла кремния, а «N‑type» — что это кремний n‑типа (с электронной проводимостью).",
-        },
-        voltage: {
-          label: "Максимальное напрежение",
-          value: "31.13 В",
-        },
-        power: { label: "Мощность", value: "475Вт" },
-        maxFuseCurrentA: {
-          label: "Max ток предохранителя",
-          value: "30 A",
-        },
-        size: {
-          label: "Габариты",
-          value: "1762x1140x30 мм.",
-        },
-        weight: { label: "Вес", value: "24.4 кг" },
-        operatingTemperatureRangeC: {
-          label: "Рабочая температура",
-          value: "−40…+70 °C",
-        },
 
-        cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
-      },
-    },
-    {
-      id: "JKN48QL6-DB",
-      tool: "Солнечная панель",
-      title: "Jinko 480",
-      model: "48QL60DB",
-      subtitle: "Солнечная панель технологии Tiger Neo III",
-      image: jkm650670n,
-      price: "Уточняйте на складе",
-      badge: "Хит продаж",
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Преобразование солнечной энергии в электричество",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "JINKO",
-          logo: <LogoJinko />,
-          link: "https://www.jinkosolar.com/en/",
-        },
-        technology: {
-          label: "Технология",
-          value: "N-type Mono-crystaline",
-          titleSmall:
-            "N-type Mono-crystaline -  — это тип солнечных ячеек (и панелей на их основе): «mono‑crystalline» значит, что ячейка сделана из одного кристалла кремния, а «N‑type» — что это кремний n‑типа (с электронной проводимостью).",
-        },
-        voltage: {
-          label: "Максимальное напрежение",
-          value: "31.32 В",
-        },
-        power: { label: "Мощность", value: "480Вт" },
-        maxFuseCurrentA: {
-          label: "Max ток предохранителя",
-          value: "30 A",
-        },
-        size: {
-          label: "Габариты",
-          value: "1762x1140x30 мм.",
-        },
-        weight: { label: "Вес", value: "24.4 кг" },
-        operatingTemperatureRangeC: {
-          label: "Рабочая температура",
-          value: "−40…+70 °C",
-        },
-
-        cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
-      },
-    },
-    {
-      id: "JKN48QL6-DB",
-      tool: "Солнечная панель",
-      title: "Jinko 485",
-      model: "48QL60DB",
-      subtitle: "Солнечная панель технологии Tiger Neo III",
-      image: jkm650670n,
-      price: "Уточняйте на складе",
-      badge: "Хит продаж",
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Преобразование солнечной энергии в электричество",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "JINKO",
-          logo: <LogoJinko />,
-          link: "https://www.jinkosolar.com/en/",
-        },
-        technology: {
-          label: "Технология",
-          value: "N-type Mono-crystaline",
-          titleSmall:
-            "N-type Mono-crystaline -  — это тип солнечных ячеек (и панелей на их основе): «mono‑crystalline» значит, что ячейка сделана из одного кристалла кремния, а «N‑type» — что это кремний n‑типа (с электронной проводимостью).",
-        },
-        voltage: {
-          label: "Максимальное напрежение",
-          value: "31.50 В",
-        },
-        power: { label: "Мощность", value: "480Вт" },
-        maxFuseCurrentA: {
-          label: "Max ток предохранителя",
-          value: "30 A",
-        },
-        size: {
-          label: "Габариты",
-          value: "1762x1140x30 мм.",
-        },
-        weight: { label: "Вес", value: "24.4 кг" },
-        operatingTemperatureRangeC: {
-          label: "Рабочая температура",
-          value: "−40…+70 °C",
-        },
-
-        cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
-      },
-    },
   ],
 };
