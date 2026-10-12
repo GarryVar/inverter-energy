@@ -13,16 +13,16 @@ function Contacts() {
         <ul className={`${styles.contactsInfo} space-y-4 text-gray-600`}>
           <li>
             <Adress />
-            Евпатория, ул. Чапаева 69
+            Симферополь
           </li>
-          <li>📞 +7 (999) 000-00-00</li>
+          <li>📞 +7 (978) 773-73-90</li>
           <li>🕒 Пн–Пт: 08:30–17:30</li>
         </ul>
         <div className={`${styles.contactsSocials} space-x-4 flex`}>
           <a href="#" className="text-blue-600 hover:underline">
             <InstaLogo />
           </a>
-          <a href="#" className="text-blue-600 hover:underline">
+          <a href="" className="text-blue-600 hover:underline">
             <TelegramLogo />
           </a>
           <a href="#" className="text-blue-600 hover:underline">
@@ -36,7 +36,7 @@ function Contacts() {
           className={`${styles.contactsMap} h-[300px] bg-gray-200 rounded overflow-hidden border border-gray-300`}
         >
           <iframe
-            src="https://yandex.ru/map-widget/v1/?ll=33.351266,45.209250&z=15"
+            src="https://yandex.ru/map-widget/v1/?ll=34.1032,44.9526&z=15"
             className="w-full h-full border-none"
           ></iframe>
         </div>
