@@ -8,6 +8,76 @@
   border-bottom: 2px solid var(--primary-grey);
 }
 
+.pruductsWrapperType {
+  h4 {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #eaeaea;
+    color: var(--primary-brand);
+    border-radius: 4px;
+    border-bottom: 1px solid var(--primary-grey);
+  }
+
+  small {
+    font-size: 12px;
+  }
+}
+
+.productTypeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Поворот иконки на 90° при открытой секции, на 0° — при закрытой */
+.iconRotate {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  transform: rotate(-45deg);
+}
+
+/* Анимация сворачивания галереи */
+.productGallery {
+  min-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-out,
+    opacity 0.3s ease-out;
+}
+
+.galleryOpen {
+  opacity: 1;
+  max-height: 1000px; /* подбери значение чуть больше ожидаемой высоты */
+}
+
+.galleryClosed {
+  opacity: 0;
+  max-height: 0;
+}
+
+.productHybrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.productGallery {
+  min-height: 0;
+  overflow: hidden;
+}
+
 /* Карточка товара */
 .productItem {
   display: flex;
@@ -20,18 +90,14 @@
   will-change: transform, box-shadow;
 }
 
-.productItem:hover {
+/* .productItem:hover {
   transform: translateY(0.5px);
-}
+} */
 
 .productItem img {
   width: 600px;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.productItem:hover img {
-  transform: scale(1.08);
 }
 
 .productName {
@@ -43,6 +109,15 @@
   margin: 0;
   text-align: center;
   letter-spacing: 2px;
+}
+
+.productPhase {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  font-weight: bold;
+  /* background-color: var(--primary-grey); */
 }
 
 /* Бейджи */

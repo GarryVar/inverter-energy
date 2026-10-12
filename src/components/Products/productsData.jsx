@@ -2,6 +2,9 @@
 import deye66k from "../../assets/products/deye_6-6K.webp";
 import deye1420k from "../../assets/products/deye_1420k.webp";
 import deye25kw from "../../assets/products/deye25kw.webp";
+import deye5kw from "../../assets/products/deye_5kw.webp";
+import deye8kw from "../../assets/products/deye_8kw.webp";
+import deye10kw from "../../assets/products/deye_10kw.webp";
 import anl1100 from "../../assets/products/anl_11000T_48l_w-pro.webp";
 
 // Charging
@@ -9,7 +12,7 @@ import dynessPowerBricSC from "../../assets/products/chargings/dyness_powerbrick
 import deyeSpringSEG from "../../assets/products/chargings/deye_spring_seg1.webp";
 
 // Solar Panels
-import lr772hvhf from "../../assets/products/panels/LR7-72HVHF.webp"
+import lr772hvhf from "../../assets/products/panels/LR7-72HVHF.webp";
 import lp1624Second from "../../assets/products/chargings/lp1624100--2.jpg";
 import jkm650670n from "../../assets/products/panels/jkm650-670n-66ql6.jpg";
 
@@ -24,16 +27,19 @@ export const products = {
   invertors: {
     hybridLV: [
       {
-        id: "DEYE_SUN-25K-SG01HP3-EU-AM2",
-        title: "DEYE SUN-25K",
+        id: "SUN-5K-SG05LP1-EU",
+        title: "DEYE SUN-5K (5 кВт)",
         tool: "Гибридный инвертор",
-        model: "DEYE SUN-25K-SG01HP3-EU-AM2",
-        subtitle: "Высоковольтный гибридный трехфазный солнечный инвертор",
-        image: deye25kw,
-        inStock: false,
+        model: "SUN-5K-SG05LP1-EU",
+        subtitle: "Низковольтный гибридный однофазный инвертор",
+        image: deye5kw,
+        inStock: true,
+        price: "120 000 ₽",
+        badge: "Хит продаж",
         purpose: {
           label: "Назначение",
-          value: "Для дома, для резервного питания, для котла отопления, для ИБП",
+          value:
+            "Для дома, для резервного питания, для котла отопления, для ИБП",
         },
         features: {
           brand: {
@@ -42,27 +48,273 @@ export const products = {
             logo: <LogoDeye />,
             link: "https://www.deye-rus.ru/",
           },
+          pahase: { label: "Фазы", value: 1 },
           type: { label: "Тип", value: "Гибридный" },
-          power: { label: "Мощность", value: "25кВт / 25000Вт" },
-          controller: { label: "Контроллер", value: "MPPT (МППТ)" },
-          solarPanelPower: {
-            label: "Мощность солнечных панелей",
-            value: "50 000 Вт",
-          },
+          power: { label: "Мощность", value: "5кВт" },
+          controller: { label: "Контроллер", value: " 2 MPPT (МППТ)" },
+          //   solarPanelPower: {
+          //     label: "Мощность солнечных панелей",
+          //     value: "8000 Вт",
+          //   },
           batteryVoltage: {
             label: "Напряжение аккумулятора",
-            value: "Литий-Ионный 160 - 700 В",
+            value: "Литий-Ионный 48 В.",
           },
+          size: {
+            label: "Габариты",
+            value: "330×580×232 мм.",
+          },
+          weight: { label: "Вес", value: "25 кг" },
+
           other: {
             label: "Дополнительные характеристики",
             value:
               "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
           },
         },
-        price: "415 040 ₽",
+      },
+
+      {
+        id: "SUN-6K-SG05LP1-EU",
+        title: "DEYE SUN-6K (6 кВт)",
+        tool: "Гибридный инвертор",
+        model: "SUN-6K-SG05LP1-EU",
+        subtitle: "Низковольтный гибридный однофазный инвертор",
+        image: deye5kw,
+        inStock: true,
+        price: "135 000 ₽",
         badge: "Хит продаж",
+        purpose: {
+          label: "Назначение",
+          value:
+            "Для частных домов и коттеджей, небольших производственных объектов. Cистем бесперебойного питания (ИБП) для критически важного оборудования (медицинская аппаратура, системы видеонаблюдения);",
+        },
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          pahase: { label: "Фазы", value: 1 },
+          type: { label: "Тип", value: "Гибридный" },
+          power: { label: "Мощность", value: "6кВт" },
+          controller: { label: "Контроллер", value: " 2 MPPT (МППТ)" },
+          //   solarPanelPower: {
+          //     label: "Мощность солнечных панелей",
+          //     value: "8000 Вт",
+          //   },
+          batteryVoltage: {
+            label: "Напряжение аккумулятора",
+            value: "Литий-Ионный 48 В.",
+          },
+          size: {
+            label: "Габариты",
+            value: "330×580×232 мм.",
+          },
+          weight: { label: "Вес", value: "24.9 кг" },
+
+          other: {
+            label: "Дополнительные характеристики",
+            value:
+              "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+          },
+        },
+      },
+
+      {
+        id: "SUN-8K-SG05LP1-EU",
+        title: "DEYE SUN-8K (8 кВт)",
+        tool: "Гибридный инвертор",
+        model: "SUN-8K-SG05LP1-EU",
+        subtitle: "Низковольтный гибридный однофазный инвертор",
+        image: deye8kw,
+        inStock: true,
+        price: "190 000 ₽",
+        badge: "Хит продаж",
+        purpose: {
+          label: "Назначение",
+          value:
+            "Для частных домов и коттеджей, небольших производственных объектов. Cистем бесперебойного питания (ИБП) для критически важного оборудования (медицинская аппаратура, системы видеонаблюдения);",
+        },
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          pahase: { label: "Фазы", value: 1 },
+          type: { label: "Тип", value: "Гибридный" },
+          power: { label: "Мощность", value: "8кВт" },
+          controller: { label: "Контроллер", value: " 2 MPPT (МППТ)" },
+          //   solarPanelPower: {
+          //     label: "Мощность солнечных панелей",
+          //     value: "8000 Вт",
+          //   },
+          batteryVoltage: {
+            label: "Напряжение аккумулятора",
+            value: "Литий-Ионный 48 В.",
+          },
+          size: {
+            label: "Габариты",
+            value: "330×580×232 мм.",
+          },
+          weight: { label: "Вес", value: "26 кг" },
+
+          other: {
+            label: "Дополнительные характеристики",
+            value:
+              "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+          },
+        },
+      },
+
+      {
+        id: "SUN-10K-SG06LP1-EU",
+        title: "DEYE SUN-10K (10 кВт)",
+        tool: "Гибридный инвертор",
+        model: "SUN-10K-SG06LP1-EU",
+        subtitle: "Низковольтный гибридный однофазный инвертор",
+        image: deye10kw,
+        inStock: true,
+        price: "200 000 ₽",
+        badge: "Хит продаж",
+        purpose: {
+          label: "Назначение",
+          value:
+            "Для частных домов и коттеджей, небольших производственных объектов. Cистем бесперебойного питания (ИБП) для критически важного оборудования (медицинская аппаратура, системы видеонаблюдения);",
+        },
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          pahase: { label: "Фазы", value: 1 },
+          type: { label: "Тип", value: "Гибридный" },
+          power: { label: "Мощность", value: "10кВт" },
+          controller: { label: "Контроллер", value: " 2 MPPT (МППТ)" },
+          //   solarPanelPower: {
+          //     label: "Мощность солнечных панелей",
+          //     value: "8000 Вт",
+          //   },
+          batteryVoltage: {
+            label: "Напряжение аккумулятора",
+            value: "Литий-Ионный 40 - 60 В.",
+          },
+          size: {
+            label: "Габариты",
+            value: "464×763×282 мм.",
+          },
+          weight: { label: "Вес", value: "52 кг" },
+
+          other: {
+            label: "Дополнительные характеристики",
+            value:
+              "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+          },
+        },
+      },
+
+      {
+        id: "SUN-12K-SG06LP1-EU",
+        title: "DEYE SUN-12K (12 кВт)",
+        tool: "Гибридный инвертор",
+        model: "SUN-12K-SG06LP1-EU",
+        subtitle: "Низковольтный гибридный однофазный инвертор",
+        image: deye10kw,
+        inStock: true,
+        price: "225 000 ₽",
+        badge: "Хит продаж",
+        purpose: {
+          label: "Назначение",
+          value:
+            "Для частных домов и коттеджей, небольших производственных объектов. Cистем бесперебойного питания (ИБП) для критически важного оборудования (медицинская аппаратура, системы видеонаблюдения);",
+        },
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          pahase: { label: "Фазы", value: 1 },
+          type: { label: "Тип", value: "Гибридный" },
+          power: { label: "Мощность", value: "12кВт" },
+          controller: { label: "Контроллер", value: " 2 MPPT (МППТ)" },
+          //   solarPanelPower: {
+          //     label: "Мощность солнечных панелей",
+          //     value: "8000 Вт",
+          //   },
+          batteryVoltage: {
+            label: "Напряжение аккумулятора",
+            value: "Литий-Ионный 40 - 60 В.",
+          },
+          size: {
+            label: "Габариты",
+            value: "464×763×282 мм.",
+          },
+          weight: { label: "Вес", value: "52 кг" },
+
+          other: {
+            label: "Дополнительные характеристики",
+            value:
+              "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+          },
+        },
+      },
+
+      {
+        id: "SUN-12K-SG05LP3-EU",
+        title: "DEYE SUN-12K (12 кВт)",
+        tool: "Гибридный инвертор",
+        model: "SUN-12K-SG05LP3-EU",
+        subtitle: "Низковольтный гибридный трёхфазный инвертор",
+        image: deye25kw,
+        inStock: true,
+        price: "290 000 ₽",
+        badge: "Хит продаж",
+        purpose: {
+          label: "Назначение",
+          value:
+            "Для частных домов и коттеджей, небольших производственных объектов. Cистем бесперебойного питания (ИБП) для критически важного оборудования (медицинская аппаратура, системы видеонаблюдения);",
+        },
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          pahase: { label: "Фазы", value: 3 },
+          type: { label: "Тип", value: "Гибридный" },
+          power: { label: "Мощность", value: "12кВт" },
+          controller: { label: "Контроллер", value: " 2 MPPT (МППТ)" },
+          //   solarPanelPower: {
+          //     label: "Мощность солнечных панелей",
+          //     value: "8000 Вт",
+          //   },
+          batteryVoltage: {
+            label: "Напряжение аккумулятора",
+            value: "Литий-Ионный 40 - 60 В.",
+          },
+          size: {
+            label: "Габариты",
+            value: "422×658×254 мм.",
+          },
+          weight: { label: "Вес", value: "38 кг" },
+
+          other: {
+            label: "Дополнительные характеристики",
+            value:
+              "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+          },
+        },
       },
     ],
+    hybridHV: [],
   },
 
   chargings: [
@@ -215,7 +467,8 @@ export const products = {
       tool: "Солнечная панель",
       title: "LONGI",
       model: "LR7-72HVHF-650M",
-      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      subtitle:
+        "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
       image: lr772hvhf,
       inStock: true,
       price: "17 600 ₽",
@@ -255,8 +508,9 @@ export const products = {
         },
 
         cell: {
-          label: "Количество ячеек", value: "144 (6x24)"
-        }
+          label: "Количество ячеек",
+          value: "144 (6x24)",
+        },
       },
     },
 
@@ -265,7 +519,8 @@ export const products = {
       tool: "Солнечная панель",
       title: "LONGI",
       model: "LR8-66HVD-650M",
-      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      subtitle:
+        "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
       image: lr772hvhf,
       inStock: true,
       price: "17 500 ₽",
@@ -305,8 +560,9 @@ export const products = {
         },
 
         cell: {
-          label: "Количество ячеек", value: "144 (6x24)"
-        }
+          label: "Количество ячеек",
+          value: "144 (6x24)",
+        },
       },
     },
 
@@ -315,7 +571,8 @@ export const products = {
       tool: "Солнечная панель",
       title: "LONGI",
       model: "LR7-60HVHL-540M",
-      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      subtitle:
+        "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
       image: lr772hvhf,
       inStock: true,
       price: "16 700 ₽",
@@ -355,8 +612,9 @@ export const products = {
         },
 
         cell: {
-          label: "Количество ячеек", value: "120 (6x20)"
-        }
+          label: "Количество ячеек",
+          value: "120 (6x20)",
+        },
       },
     },
 
@@ -365,7 +623,8 @@ export const products = {
       tool: "Солнечная панель",
       title: "LONGI",
       model: "LR7-54HVH-485M",
-      subtitle: "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
+      subtitle:
+        "Солнечная панель технологии  NType 2.0 Оснащена ячейками HPBC 2.0",
       image: lr772hvhf,
       inStock: true,
       price: "14 000 ₽",
@@ -405,8 +664,9 @@ export const products = {
         },
 
         cell: {
-          label: "Количество ячеек", value: "120 (6x20)"
-        }
+          label: "Количество ячеек",
+          value: "120 (6x20)",
+        },
       },
     },
 
@@ -512,8 +772,9 @@ export const products = {
         },
 
         cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
+          label: "Количество ячеек",
+          value: "264 (66x4)",
+        },
       },
     },
     {
@@ -564,10 +825,10 @@ export const products = {
         },
 
         cell: {
-          label: "Количество ячеек", value: "264 (66x4)"
-        }
+          label: "Количество ячеек",
+          value: "264 (66x4)",
+        },
       },
     },
-
   ],
 };
