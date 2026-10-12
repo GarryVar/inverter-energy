@@ -40,7 +40,7 @@ function Products() {
     <section id="products" className="py-16 bg-white">
       <div className={`${styles.products} container mx-auto px-4`}>
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-          Наши товары и решения
+          Наши товары
         </h2>
         <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
           Подбираем оборудование под ваши задачи: от резервного питания до
@@ -52,43 +52,48 @@ function Products() {
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
             Инверторы
           </h3>
-          <Swiper
-            style={{
-              "--swiper-navigation-size": "25px",
-              "--swiper-pagination-color": "var(--primary-brand)",
-              "--swiper-navigation-color": "var(--primary-brand)",
-              "--swiper-navigation-top-offset": "35%",
-            }}
-            modules={[Navigation, Pagination]}
-            spaceBetween={16}
-            slidesPerView={1}
-            loop
-            pagination={{ clickable: true }}
-            navigation
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
-            }}
-            className="pb-8"
-          >
-            {invertors.map((product) => (
-              <SwiperSlide
-                style={{
-                  "--swiper-navigation-size": "25px",
-                  "--swiper-pagination-color": "var(--primary-brand)",
-                  "--swiper-navigation-color": "var(--primary-brand)",
-                  "--swiper-navigation-top-offset": "35%",
-                }}
-                key={product.id}
-              >
-                <ProductCard
-                  product={product}
-                  onOrderClick={handleOrderClick}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="pruductsWrapperType">
+            <h4 className="text-4xl md:text-1xl font-bold mb-10 text-gray-800">Гибридные (LV) <small> <i>под низковольиные батареи 48-51,2 В</i></small></h4>
+            {/* Гибридные LV */}
+            <Swiper
+              style={{
+                "--swiper-navigation-size": "25px",
+                "--swiper-pagination-color": "var(--primary-brand)",
+                "--swiper-navigation-color": "var(--primary-brand)",
+                "--swiper-navigation-top-offset": "35%",
+              }}
+              modules={[Navigation, Pagination]}
+              spaceBetween={16}
+              slidesPerView={1}
+              loop
+              pagination={{ clickable: true }}
+              navigation
+              breakpoints={{
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
+              }}
+              className="pb-8"
+            >
+              {invertors.hybridLV.map((product) => (
+                <SwiperSlide
+                  style={{
+                    "--swiper-navigation-size": "25px",
+                    "--swiper-pagination-color": "var(--primary-brand)",
+                    "--swiper-navigation-color": "var(--primary-brand)",
+                    "--swiper-navigation-top-offset": "35%",
+                  }}
+                  key={product.id}
+                >
+                  <ProductCard
+                    product={product}
+                    onOrderClick={handleOrderClick}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
         </div>
         <div className={styles.productsWrapper}>
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">

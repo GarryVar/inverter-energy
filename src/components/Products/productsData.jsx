@@ -21,122 +21,49 @@ import LogoAninerel from "../SvgIcons/LogoAninerel";
 import LogoBrandLongi from "../SvgIcons/LogoBrandLongi";
 
 export const products = {
-  invertors: [
-    {
-      id: "ANL-11000T-48L-W-PRO",
-      tool: "Гибридный инвертор",
-      title: "Aninerel 1100Вт",
-      model: "ANL-11000T-48L-W-PRO",
-      subtitle: "Гибридный солнечный инвертор",
-      image: anl1100,
-      inStock: false,
-      price: "108 864 ₽",
-      badge: "Хит продаж",
-      purpose: {
-        label: "Назначение",
-        value:
-          "Гибридный солнечный инвертор ANINEREL на 11 кВт — это «мозг» и «мост» домашней солнечной системы: он преобразует ток, управляет потоками энергии и обеспечивает питание дома в разных сценариях.",
+  invertors: {
+    hybridLV: [
+      {
+        id: "DEYE_SUN-25K-SG01HP3-EU-AM2",
+        title: "DEYE SUN-25K",
+        tool: "Гибридный инвертор",
+        model: "DEYE SUN-25K-SG01HP3-EU-AM2",
+        subtitle: "Высоковольтный гибридный трехфазный солнечный инвертор",
+        image: deye25kw,
+        inStock: false,
+        purpose: {
+          label: "Назначение",
+          value: "Для дома, для резервного питания, для котла отопления, для ИБП",
+        },
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          type: { label: "Тип", value: "Гибридный" },
+          power: { label: "Мощность", value: "25кВт / 25000Вт" },
+          controller: { label: "Контроллер", value: "MPPT (МППТ)" },
+          solarPanelPower: {
+            label: "Мощность солнечных панелей",
+            value: "50 000 Вт",
+          },
+          batteryVoltage: {
+            label: "Напряжение аккумулятора",
+            value: "Литий-Ионный 160 - 700 В",
+          },
+          other: {
+            label: "Дополнительные характеристики",
+            value:
+              "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
+          },
+        },
+        price: "415 040 ₽",
+        badge: "Хит продаж",
       },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "Aninerel",
-          logo: <LogoAninerel />,
-          link: "",
-        },
-        type: { label: "Тип", value: "Бестрансформаторный" },
-        power: { label: "Мощность", value: "11000 Вт" },
-        controller: { label: "Контроллер", value: "MPPT ( 2 штуки )" },
-        solarPanelPower: {
-          label: "Мощность солнечных панелей",
-          value: "550Вт",
-        },
-
-        batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
-        other: {
-          label: "Дополнительные характеристики",
-          value:
-            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — да",
-        },
-      },
-    },
-
-    {
-      id: "POWER-MR13200W-AC",
-      tool: "Гибридный инвертор",
-      title: "PowerMr",
-      model: "PowerMr POW-HVM13.2M",
-      subtitle: "Готовое решение под ключ: панели, инвертор, АКБ, монтаж",
-      image: deye1420k,
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Для дома, для резервного питания, для котла отопления, для ИБП",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "PowerMr",
-          logo: <LogoDeye />,
-          link: "https://www.deye-rus.ru/",
-        },
-        type: { label: "Тип", value: "Бестрансформаторный" },
-        power: { label: "Мощность", value: "15кВт / 15000Вт" },
-        controller: { label: "Контроллер", value: "MPPT (МППТ)" },
-        solarPanelPower: {
-          label: "Мощность солнечных панелей",
-          value: "30 000 Вт",
-        },
-        batteryVoltage: { label: "Напряжение аккумулятора", value: "48 В" },
-        other: {
-          label: "Дополнительные характеристики",
-          value:
-            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — нет",
-        },
-      },
-      price: "398 664 ₽",
-      badge: "Лучшее решение",
-    },
-    {
-      id: "DEYE_SUN-25K-SG01HP3-EU-AM2",
-      title: "DEYE SUN-25K",
-      tool: "Гибридный инвертор",
-      model: "DEYE SUN-25K-SG01HP3-EU-AM2",
-      subtitle: "Высоковольтный гибридный трехфазный солнечный инвертор",
-      image: deye25kw,
-      inStock: false,
-      purpose: {
-        label: "Назначение",
-        value: "Для дома, для резервного питания, для котла отопления, для ИБП",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "Deye",
-          logo: <LogoDeye />,
-          link: "https://www.deye-rus.ru/",
-        },
-        type: { label: "Тип", value: "Гибридный инвертор" },
-        power: { label: "Мощность", value: "25кВт / 25000Вт" },
-        controller: { label: "Контроллер", value: "MPPT (МППТ)" },
-        solarPanelPower: {
-          label: "Мощность солнечных панелей",
-          value: "50 000 Вт",
-        },
-        batteryVoltage: {
-          label: "Напряжение аккумулятора",
-          value: "Литий-Ионный 160 - 700 В",
-        },
-        other: {
-          label: "Дополнительные характеристики",
-          value:
-            "Подмешивание в сеть — есть, работа без АКБ — да, экспорт в сеть — есть",
-        },
-      },
-      price: "415 040 ₽",
-      badge: "Хит продаж",
-    },
-  ],
+    ],
+  },
 
   chargings: [
     {
