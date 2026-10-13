@@ -1,6 +1,6 @@
 import styles from "./OrderForm.module.css";
 
-function OrderForm({ formData, onFormChange, onSubmit }) {
+function OrderForm({ product, formData, onFormChange, onSubmit }) {
   return (
     <form onSubmit={onSubmit} className={` ${styles.orderForm} space-y-4`}>
       <div className={styles.orderInput}>
@@ -54,7 +54,7 @@ function OrderForm({ formData, onFormChange, onSubmit }) {
         type="submit"
         className="py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition-colors shadow-md w-full"
       >
-        Заказать
+        Консультация
       </button>
     </form>
   );

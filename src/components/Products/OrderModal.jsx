@@ -121,8 +121,7 @@ function OrderModal({ product, onClose }) {
                 </div>
                 <div className={styles.orderProductStatsInner}>
                   <h3 className="font-semibold text-gray-800 text-2xl md:text-3xl lg:text-3xl">
-                    {product.tool || ""} {product.title || ""}
-                    <small>({product.model || ""})</small>
+                    {product.title || ""}
                   </h3>
 
                   <p className={styles.orderProductSubTitle}>
@@ -158,7 +157,7 @@ function OrderModal({ product, onClose }) {
                   </span>
                 </div>
               </div>
-
+              <small>Модель: {product.model || ""}</small>
               <Features
                 styles={styles}
                 featuresRef={featuresRef}
@@ -169,6 +168,7 @@ function OrderModal({ product, onClose }) {
           </div>
 
           <OrderForm
+            product={product}
             formData={formData}
             onFormChange={handleChange}
             onSubmit={handleSubmit}

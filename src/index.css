@@ -1,7 +1,8 @@
 :root {
   --primary-grey: #dbdbdb;
-  --primary-brand: #4b2637;
-  --primary-brand-light: #7d2941;
+  --primary-light: var(--color-zinc-600);
+  --primary-brand: #304c2c;
+  --primary-brand-light: #78b833;
 
   --swiper-pagination-color: var(--primary-brand);
 }
@@ -15,7 +16,8 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: var(--primary-brand);
+  background-color: var(--primary-brand-light);
+  border: none;
 
   .swiper-navigation-icon {
     color: white;

@@ -18,7 +18,7 @@
     background-color: #eaeaea;
     color: var(--primary-brand);
     border-radius: 4px;
-    border-bottom: 1px solid var(--primary-grey);
+    /* border-bottom: 1px solid var(--primary-grey); */
   }
 
   small {
@@ -30,15 +30,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 
   margin-left: auto;
   background-color: transparent;
+  color: var(--primary-brand);
+  border-radius: 50%;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 5px;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-brand-light);
+    color: var(--color-white);
+  }
 }
 
 /* Поворот иконки на 90° при открытой секции, на 0° — при закрытой */
@@ -76,6 +84,8 @@
 .productGallery {
   min-height: 0;
   overflow: hidden;
+  width: 65vw;
+  margin: auto;
 }
 
 /* Карточка товара */
@@ -164,4 +174,11 @@
 
 .productBadgeOutStock {
   background-color: var(--color-gray-200);
+}
+
+@media (min-width: 768px) {
+  .productGallery {
+    margin: 0;
+    width: 100%;
+  }
 }
