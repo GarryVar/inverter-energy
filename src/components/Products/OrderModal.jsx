@@ -140,11 +140,10 @@ function OrderModal({ product, onClose }) {
                   >
                     Характеристики
                     <div
-                      className={`${styles.orderIconArrow} ${
-                        isFeaturesVisible
-                          ? styles.orderIconArrowUp
-                          : styles.orderIconArrowDown
-                      }`}
+                      className={`${styles.orderIconArrow} ${isFeaturesVisible
+                        ? styles.orderIconArrowUp
+                        : styles.orderIconArrowDown
+                        }`}
                     >
                       <IconFeaturesToggle />
                     </div>
@@ -157,7 +156,6 @@ function OrderModal({ product, onClose }) {
                   </span>
                 </div>
               </div>
-              <small>Модель: {product.model || ""}</small>
               <Features
                 styles={styles}
                 featuresRef={featuresRef}

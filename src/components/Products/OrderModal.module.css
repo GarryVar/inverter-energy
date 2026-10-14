@@ -88,6 +88,7 @@
 }
 
 .orderProductStatsInner {
+  position: relative;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
@@ -98,6 +99,7 @@
     grid-row: 1;
     grid-column: 1/-1;
   }
+
 }
 
 .orderProductSubTitle {
@@ -105,7 +107,7 @@
 }
 
 .orderProductPurpose {
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 1/-1;
   font-size: 14px;
   text-align: justify;
@@ -225,6 +227,10 @@
     color: var(--primary-brand);
     letter-spacing: 1.5px;
     font-weight: bold;
+  }
+
+  .orderProductPurpose {
+    grid-row: 3;
   }
 
   .orderProductImage {
