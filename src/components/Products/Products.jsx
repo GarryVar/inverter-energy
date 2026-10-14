@@ -62,14 +62,17 @@ function Products() {
             {/* Гибридные LV */}
             <div className={styles.productHybrid}>
               <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
-                Гибридные (LV)
-                <button
-                  className={`${styles.productTypeToggle} ${isHybridLVOpen ? styles.iconRotate : ""}`}
-                  onClick={() => setIsHybridLVOpen(!isHybridLVOpen)}
-                  aria-expanded={isHybridLVOpen}
-                >
-                  <IconPlus />
-                </button>
+                <div className={styles.productHybridWrapper}>
+
+                  Гибридные (LV)
+                  <button
+                    className={`${styles.productTypeToggle} ${isHybridLVOpen ? styles.iconRotate : ""}`}
+                    onClick={() => setIsHybridLVOpen(!isHybridLVOpen)}
+                    aria-expanded={isHybridLVOpen}
+                  >
+                    <IconPlus />
+                  </button>
+                </div>
               </h4>
 
               <div
@@ -118,14 +121,17 @@ function Products() {
             {/* Гибридные HV */}
             <div className={styles.productHybrid}>
               <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
-                Гибридные (HV)
-                <button
-                  className={`${styles.productTypeToggle} ${isHybridHVOpen ? styles.iconRotate : ""}`}
-                  onClick={() => setIsHybridHVOpen(!isHybridHVOpen)}
-                  aria-expanded={isHybridHVOpen}
-                >
-                  <IconPlus />
-                </button>
+                <div className={styles.productHybridWrapper}>
+
+                  Гибридные (HV)
+                  <button
+                    className={`${styles.productTypeToggle} ${isHybridHVOpen ? styles.iconRotate : ""}`}
+                    onClick={() => setIsHybridHVOpen(!isHybridHVOpen)}
+                    aria-expanded={isHybridHVOpen}
+                  >
+                    <IconPlus />
+                  </button>
+                </div>
               </h4>
 
               <div
@@ -173,14 +179,17 @@ function Products() {
             {/* Сетевые */}
             <div className={styles.productHybrid}>
               <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
-                Сетевые
-                <button
-                  className={`${styles.productTypeToggle} ${isGridOpen ? styles.iconRotate : ""}`}
-                  onClick={() => setGridOpen(!isGridOpen)}
-                  aria-expanded={isGridOpen}
-                >
-                  <IconPlus />
-                </button>
+                <div className={styles.productHybridWrapper}>
+
+                  Сетевые
+                  <button
+                    className={`${styles.productTypeToggle} ${isGridOpen ? styles.iconRotate : ""}`}
+                    onClick={() => setGridOpen(!isGridOpen)}
+                    aria-expanded={isGridOpen}
+                  >
+                    <IconPlus />
+                  </button>
+                </div>
               </h4>
               <div
                 className={`${styles.productGallery} ${isGridOpen ? styles.galleryOpen : styles.galleryClosed}`}
@@ -314,4 +323,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Products; 

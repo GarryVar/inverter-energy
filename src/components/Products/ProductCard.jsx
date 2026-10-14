@@ -28,7 +28,7 @@ export function ProductCard({ product, onOrderClick }) {
         loading="lazy"
       />
       <div className="p-10">
-        {product.badge &&
+        {
           (product.inStock ? (
             <span
               className={`${styles.productBadge} ${styles.inStock} inline-block  text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wide mb-3`}
