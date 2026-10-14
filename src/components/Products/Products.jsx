@@ -18,6 +18,7 @@ function Products() {
   // Состояния для секций инверторов
   const [isHybridLVOpen, setIsHybridLVOpen] = useState(true); // по умолчанию открыта
   const [isHybridHVOpen, setIsHybridHVOpen] = useState(true);
+  const [isGridOpen, setGridOpen] = useState(true);
 
   const { invertors, chargings, panels } = products;
 
@@ -170,7 +171,59 @@ function Products() {
               </div>
             </div>
             {/* Сетевые */}
-            <div className="productSetevoy">Секция В разработке ...</div>
+            <div className={styles.productHybrid}>
+              <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
+                Сетевые
+                <button
+                  className={`${styles.productTypeToggle} ${isGridOpen ? styles.iconRotate : ""}`}
+                  onClick={() => setGridOpen(!isGridOpen)}
+                  aria-expanded={isGridOpen}
+                >
+                  <IconPlus />
+                </button>
+              </h4>
+              <div
+                className={`${styles.productGallery} ${isGridOpen ? styles.galleryOpen : styles.galleryClosed}`}
+              >
+                <Swiper
+                  style={{
+                    "--swiper-navigation-size": "25px",
+                    "--swiper-pagination-color": "var(--primary-brand)",
+                    "--swiper-navigation-color": "var(--primary-brand)",
+                    "--swiper-navigation-top-offset": "35%",
+                  }}
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={16}
+                  slidesPerView={1}
+                  loop
+                  pagination={{ clickable: true }}
+                  navigation
+                  breakpoints={{
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                    1280: { slidesPerView: 4 },
+                  }}
+                  className="pb-8"
+                >
+                  {invertors.grid.map((product) => (
+                    <SwiperSlide
+                      key={product.id}
+                      style={{
+                        "--swiper-navigation-size": "25px",
+                        "--swiper-pagination-color": "var(--primary-brand)",
+                        "--swiper-navigation-color": "var(--primary-brand)",
+                        "--swiper-navigation-top-offset": "35%",
+                      }}
+                    >
+                      <ProductCard
+                        product={product}
+                        onOrderClick={handleOrderClick}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </div>
           </div>
         </div>
 
