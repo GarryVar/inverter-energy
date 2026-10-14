@@ -4,16 +4,17 @@ import Advantages from "../components/Advantages/Advantages";
 import Contacts from "../components/Contacts/Contacts";
 import Footer from "../components/Footer/Footer";
 import Products from "../components/Products/Products";
-
+import Hero2 from "../components/Hero2/Hero2";
 import "../index.css";
 
 function Home() {
   return (
     <div className="bg-white">
       <Hero />
+      <Hero2 />
       <Pain />
       <Advantages />
-      <Products/>
+      <Products />
       <Contacts />
       <Footer />
     </div>

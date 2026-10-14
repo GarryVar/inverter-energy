@@ -3,9 +3,7 @@ import "./index.css";
 import "animate.css";
 
 function App() {
-  return (
-    <Home/>
-  );
+  return <Home />;
 }
 
 export default App;

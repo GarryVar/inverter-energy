@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import HeroImage from "../../assets/image02.webp";
-import styles from "./Hero.module.css";
 import ContactForm from "../ContactForm/ContactForm";
 import IconMenuClose from "../SvgIcons/IconMenuClose";
+import styles from "./Hero.module.css";
 
 function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,29 +36,6 @@ function Hero() {
         alt="Энергосистема в частном доме"
         className={`${styles.hero}`}
       />
-
-      {/* Work in progress блок */}
-      {/* <div
-        style={{
-          display: "flex",
-          gap: "20px",
-          position: "fixed",
-          top: "40px",
-          left: "40px",
-          zIndex: 900,
-          color: "white",
-          fontWeight: "bold",
-          fontSize: "20px",
-          textShadow: "0 0 7px black",
-        }}
-      >
-        <code>GarryVar~Work in progress</code>
-        <div className="typing-dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div> */}
 
       <div className="absolute inset-0">
         <Header />
