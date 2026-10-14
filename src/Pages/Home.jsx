@@ -11,7 +11,6 @@ function Home() {
   return (
     <div className="bg-white">
       <Hero />
-      <Hero2 />
       <Pain />
       <Advantages />
       <Products />
