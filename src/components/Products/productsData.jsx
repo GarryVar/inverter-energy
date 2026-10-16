@@ -1151,149 +1151,53 @@ export const products = {
     ],
   },
 
-  chargings: [
-    {
-      id: "dyness_powerbrickSC",
-      tool: "Аккумуляторная батарея",
-      title: "Аккумуляторная батарея (LiFePO₄)",
-      model: "Dyness PowerBrick SCD",
-      image: dynessPowerBricSC,
-      inStock: true,
-      price: "220 000 ₽",
+  chargings: {
+    chrageLV: [
+      {
+        id: "SE-5.1 Pro-B",
+        tool: "Аккумуляторная батарея",
+        title: "DEYE-SE-5.1 Pro-B (LiFePO₄)",
+        model: "Deye SE-G5.1 Pro-B",
+        inStock: false,
+        image: deyeSpringSEG,
+        price: "144 000 ₽",
 
-      subtitle:
-        "Низковольтная литий-железо-фосфатная (LiFePO₄) аккумуляторная батарея, разработанная для домашнего и небольшого коммерческого хранения энергии, в том числе в составе солнечных систем. ",
-      purpose: {
-        label: "Назначение",
-        value:
-          "Хранение энергии в солнечных системах для использования ночью или при отключениях сети.",
-      },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "Dyness",
-          logo: <LogoDyness />,
-          link: "https://www.deye-rus.ru/",
+        subtitle:
+          "Низковольтный литий‑железо‑фосфатный (LiFePO₄) модуль ёмкостью 5,12 кВт·ч (номинально указывают как 5 кВт·ч).",
+        purpose: {
+          label: "Назначение",
+          value:
+            "Он подходит для солнечных электростанций, гибридных систем и резервного питания — в том числе в составе решений для частных домов . Модульная конструкция позволяет наращивать ёмкость под нужную автономность.",
         },
-        type: {
-          label: "Тип батареи",
-          value: "LiFePO4(LFP)",
-        },
-        power: { label: "Номинальное напряжение", value: " 51,2 В" },
-        energy: { label: "Номинальная энергия", value: "16,076 кВт·ч." },
-        capacity: { label: "Номинальная мощность", value: "314 А·ч" },
-        internalResistance: {
-          label: "Внутреннее сопротивление",
-          value: "≤60mΩ",
-        },
-        lifeCycles: {
-          label: "Количество жизненных циклов разряда/заряда",
-          value: "≥8000 циклов",
-        },
-        ServicePeriod: { label: "Срок службы", value: "10 лет" },
-        size: {
-          label: "Размер",
-          value: "435*233*857 мм.",
-        },
-        weight: { label: "Вес", value: "116кг" },
-      },
-    },
 
-    {
-      id: "dyness_powerbrickSC",
-      tool: "Аккумуляторная батарея",
-      title: "Аккумуляторная батарея (LiFePO₄)",
-      model: "Dyness PowerBrick SC",
-      image: dynessPowerBricSC,
-      inStock: true,
-      price: "220 000 ₽",
-
-      subtitle:
-        "Низковольтная литий-железо-фосфатная (LiFePO₄) аккумуляторная батарея, разработанная для домашнего и небольшого коммерческого хранения энергии, в том числе в составе солнечных систем. ",
-      purpose: {
-        label: "Назначение",
-        value:
-          "Хранение энергии в солнечных системах для использования ночью или при отключениях сети.",
+        features: {
+          brand: {
+            label: "Бренд",
+            value: "Deye",
+            logo: <LogoDeye />,
+            link: "https://www.deye-rus.ru/",
+          },
+          type: {
+            label: "Тип батареи",
+            value: "LiFePO4(LFP)",
+          },
+          capacity: { label: "Емкость", value: "100 А·ч" },
+          power: { label: "Номинальное напряжение", value: " 51,2 В" },
+          lifeCycles: {
+            label: "Количество жизненных циклов разряда/заряда",
+            value: "≥6000 циклов",
+          },
+          size: {
+            label: "Размер",
+            value: "440 x 133 x 540 мм.",
+          },
+          weight: { label: "Вес", value: "45 кг" },
+          servicePeriod: { label: "Срок службы", value: "10 лет" },
+        },
       },
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "Dyness",
-          logo: <LogoDyness />,
-          link: "https://www.deye-rus.ru/",
-        },
-        type: {
-          label: "Тип батареи",
-          value: "LiFePO4(LFP)",
-        },
-        power: { label: "Номинальное напряжение", value: " 51,2 В" },
-        energy: { label: "Номинальная энергия", value: "16,076 кВт·ч." },
-        capacity: { label: "Номинальная мощность", value: "314 А·ч" },
-        internalResistance: {
-          label: "Внутреннее сопротивление",
-          value: "≤60mΩ",
-        },
-        lifeCycles: {
-          label: "Количество жизненных циклов разряда/заряда",
-          value: "≥8000 циклов",
-        },
-        ServicePeriod: { label: "Срок службы", value: "10 лет" },
-        size: {
-          label: "Размер",
-          value: "435*233*857 мм.",
-        },
-        weight: { label: "Вес", value: "116кг" },
-      },
-    },
-
-    {
-      id: "DEYE_SPRING_SEG1PROB",
-      tool: "Аккумуляторная батарея",
-      title: "Аккумуляторная батарея (LiFePO₄)",
-      model: "Deye SE-G5.1 Pro-B",
-      inStock: false,
-      image: deyeSpringSEG,
-      price: "220 000 ₽",
-
-      subtitle:
-        "Низковольтный литий-железо-фосфатный (LiFePO₄) аккумуляторный модуль ёмкостью 5,12 кВт·ч. Он предназначен для работы с гибридными инверторами Deye и системами накопления энергии.",
-      purpose: {
-        label: "Назначение",
-        value:
-          "Хранение энергии в солнечных системах для использования ночью или при отключениях сети.",
-      },
-
-      features: {
-        brand: {
-          label: "Бренд",
-          value: "Deye",
-          logo: <LogoDeye />,
-          link: "https://www.deye-rus.ru/",
-        },
-        type: {
-          label: "Тип батареи",
-          value: "LiFePO4(LFP)",
-        },
-        power: { label: "Номинальное напряжение", value: " 51,2 В" },
-        energy: { label: "Номинальная энергия", value: "16,076 кВт·ч." },
-        capacity: { label: "Номинальная мощность", value: "314 А·ч" },
-        internalResistance: {
-          label: "Внутреннее сопротивление",
-          value: "≤60mΩ",
-        },
-        lifeCycles: {
-          label: "Количество жизненных циклов разряда/заряда",
-          value: "≥8000 циклов",
-        },
-        ServicePeriod: { label: "Срок службы", value: "10 лет" },
-        size: {
-          label: "Размер",
-          value: "435*233*857 мм.",
-        },
-        weight: { label: "Вес", value: "116кг" },
-      },
-    },
-  ],
+    ],
+    chargeHV: [],
+  },
   panels: [
     // LONGI
     {

@@ -23,7 +23,7 @@
   }
 }
 
-.productHybridWrapper {
+.productTypeTitle {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -86,7 +86,7 @@
   max-height: 0;
 }
 
-.productHybrid {
+.productType {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -95,7 +95,6 @@
 .productGallery {
   min-height: 0;
   overflow: hidden;
-
 }
 
 /* Карточка товара */
@@ -138,7 +137,6 @@
   text-align: center;
   letter-spacing: 2px;
 }
-
 
 /* Бейджи */
 .productBadge,

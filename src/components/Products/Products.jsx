@@ -19,6 +19,7 @@ function Products() {
   const [isHybridLVOpen, setIsHybridLVOpen] = useState(true); // по умолчанию открыта
   const [isHybridHVOpen, setIsHybridHVOpen] = useState(true);
   const [isGridOpen, setGridOpen] = useState(true);
+  const [ischargeLVOpen, setchargeLVOpen] = useState(true);
 
   const { invertors, chargings, panels } = products;
 
@@ -60,10 +61,9 @@ function Products() {
 
           <div className={styles.pruductsWrapperType}>
             {/* Гибридные LV */}
-            <div className={styles.productHybrid}>
+            <div className={styles.productType}>
               <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
-                <div className={styles.productHybridWrapper}>
-
+                <div className={styles.productTypeTitle}>
                   Гибридные (LV)
                   <button
                     className={`${styles.productTypeToggle} ${isHybridLVOpen ? styles.iconRotate : ""}`}
@@ -119,10 +119,9 @@ function Products() {
             </div>
 
             {/* Гибридные HV */}
-            <div className={styles.productHybrid}>
+            <div className={styles.productType}>
               <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
-                <div className={styles.productHybridWrapper}>
-
+                <div className={styles.productTypeTitle}>
                   Гибридные (HV)
                   <button
                     className={`${styles.productTypeToggle} ${isHybridHVOpen ? styles.iconRotate : ""}`}
@@ -177,10 +176,9 @@ function Products() {
               </div>
             </div>
             {/* Сетевые */}
-            <div className={styles.productHybrid}>
+            <div className={styles.productType}>
               <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
-                <div className={styles.productHybridWrapper}>
-
+                <div className={styles.productTypeTitle}>
                   Сетевые
                   <button
                     className={`${styles.productTypeToggle} ${isGridOpen ? styles.iconRotate : ""}`}
@@ -236,83 +234,117 @@ function Products() {
           </div>
         </div>
 
-        {/* Панели */}
+        {/* Аккумуляторы */}
         <div className={styles.productsWrapper}>
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
-            Солнечные панели
+            Аккумуляторы
           </h3>
-          <div className={styles.productGallery}>
-            <Swiper
-              style={{
-                "--swiper-navigation-size": "25px",
-                "--swiper-pagination-color": "var(--primary-brand)",
-                "--swiper-navigation-color": "var(--primary-brand)",
-                "--swiper-navigation-top-offset": "35%",
-              }}
-              modules={[Navigation, Pagination]}
-              spaceBetween={16}
-              slidesPerView={1}
-              loop
-              pagination={{ clickable: true }}
-              navigation
-              breakpoints={{
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-                1280: { slidesPerView: 4 },
-              }}
-              className="pb-8"
-            >
-              {panels.map((product) => (
-                <SwiperSlide
-                  key={product.id}
+          <div className={styles.pruductsWrapperType}>
+            {/* АКБ LV */}
+            <div className={styles.productType}>
+              <h4 className="text-2xl md:text-1xl font-bold mb-10 text-gray-800">
+                <div className={styles.productTypeTitle}>
+                  АКБ (LV)
+                  <button
+                    className={`${styles.productTypeToggle} ${ischargeLVOpen ? styles.iconRotate : ""}`}
+                    onClick={() => setchargeLVOpen(!ischargeLVOpen)}
+                    aria-expanded={ischargeLVOpen}
+                  >
+                    <IconPlus />
+                  </button>
+                </div>
+              </h4>
+
+              <div
+                className={`${styles.productGallery} ${ischargeLVOpen ? styles.galleryOpen : styles.galleryClosed}`}
+              >
+                <Swiper
                   style={{
                     "--swiper-navigation-size": "25px",
                     "--swiper-pagination-color": "var(--primary-brand)",
                     "--swiper-navigation-color": "var(--primary-brand)",
                     "--swiper-navigation-top-offset": "35%",
                   }}
+                  modules={[Navigation, Pagination]}
+                  spaceBetween={16}
+                  slidesPerView={1}
+                  loop
+                  pagination={{ clickable: true }}
+                  navigation
+                  breakpoints={{
+                    640: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                    1280: { slidesPerView: 4 },
+                  }}
+                  className="pb-8"
                 >
-                  <ProductCard
-                    product={product}
-                    onOrderClick={handleOrderClick}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  {chargings.chrageLV.map((product) => (
+                    <SwiperSlide
+                      key={product.id}
+                      style={{
+                        "--swiper-navigation-size": "25px",
+                        "--swiper-pagination-color": "var(--primary-brand)",
+                        "--swiper-navigation-color": "var(--primary-brand)",
+                        "--swiper-navigation-top-offset": "35%",
+                      }}
+                    >
+                      <ProductCard
+                        product={product}
+                        onOrderClick={handleOrderClick}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Аккумуляторы */}
-        <div className={styles.productsWrapper}>
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
-            Аккумуляторы
-          </h3>
-          <div className={styles.productGallery}>
-            <Swiper
-              style={{ "--swiper-navigation-size": "25px" }}
-              modules={[Navigation, Pagination]}
-              spaceBetween={16}
-              slidesPerView={1}
-              loop
-              pagination={{ clickable: true }}
-              navigation
-              breakpoints={{
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-                1280: { slidesPerView: 4 },
-              }}
-              className="pb-8"
-            >
-              {chargings.map((product) => (
-                <SwiperSlide key={product.id}>
-                  <ProductCard
-                    product={product}
-                    onOrderClick={handleOrderClick}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+      {/* Панели */}
+      <div className={styles.productsWrapper}>
+        <h3 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
+          Солнечные панели
+        </h3>
+
+        <div className={styles.productGallery}>
+          <Swiper
+            style={{
+              "--swiper-navigation-size": "25px",
+              "--swiper-pagination-color": "var(--primary-brand)",
+              "--swiper-navigation-color": "var(--primary-brand)",
+              "--swiper-navigation-top-offset": "35%",
+            }}
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            loop
+            pagination={{ clickable: true }}
+            navigation
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            className="pb-8"
+          >
+            {panels.map((product) => (
+              <SwiperSlide
+                key={product.id}
+                style={{
+                  "--swiper-navigation-size": "25px",
+                  "--swiper-pagination-color": "var(--primary-brand)",
+                  "--swiper-navigation-color": "var(--primary-brand)",
+                  "--swiper-navigation-top-offset": "35%",
+                }}
+              >
+                <ProductCard
+                  product={product}
+                  onOrderClick={handleOrderClick}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
 
@@ -323,4 +355,4 @@ function Products() {
   );
 }
 
-export default Products; 
+export default Products;
