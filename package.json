@@ -1,9 +1,9 @@
 {
-  "name": "invertor-energy",
+  "name": "inverter-energy",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://garryvar.github.io/invertor-energy/",
+  "homepage": "https://garryvar.github.io/inverter-energy/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
