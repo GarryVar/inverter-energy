@@ -12,5 +12,5 @@ export default defineConfig({
     tailwind(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
-  base: "/invertor-energy/",
+  base: "/inverter-energy/",
 });
